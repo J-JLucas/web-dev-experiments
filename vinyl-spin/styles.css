@@ -9,11 +9,14 @@ body {
   display: inline-block;
   width: 100%;
   max-width: 400px;
-  animation: spin 4s linear infinite;  /*anim def, loop duration, style, duration */
+  /*anim def, loop duration, style, duration */
+  animation: spin 4s linear infinite;
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 #img-vinyl {
@@ -31,4 +34,3 @@ body {
   border-radius: 50%;
   overflow: hidden;
 }
-
