@@ -1,6 +1,6 @@
 import "./style.css";
 
-const clientId = "####";
+const clientId = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
 const params = new URLSearchParams(window.location.search);
 const code = params.get("code");
 
@@ -85,6 +85,7 @@ function populateUI(profile) {
     profileImage.src = profile.images[0].url;
     document.getElementById("avatar").appendChild(profileImage);
     document.getElementById("imgUrl").innerText = profile.images[0].url;
+    document.getElementById("imgUrl").setAttribute("href", profile.images[0].url);
   }
   document.getElementById("id").innerText = profile.id;
   document.getElementById("email").innerText = profile.email;
